@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="sk">
+
+    <head>
+        <title>Zadanie 6</title>
+        <meta charset="utf-8">
+        <meta name='viewport' content='width=device-width'>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./css/style.css">
+        
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <script src="./script/script.js"></script>
+    </head>
+    
+    <body onload="initGraph()">
+      
+    
+
+
+        <section>
+            <h2>Graf</h2><hr>
+            
+            <label for="sin">Sinus</label>
+            <input type="checkbox" id="sin" onchange="checkSin()" checked><br>
+            <label for="cos">Cosinus</label>
+            <input type="checkbox" id="cos" class="mb" onchange="checkCos()" checked>
+            
+            
+            <div id="graf" class="graphDiv">          
+            </div><hr>
+                 
+            <button class="button" style="vertical-align:middle" onclick="endGraph()"><span>Už mám toho akurát tak dosť!! </span></button>
+        </section>    
+        
+        
+
+        <template>
+            <div class="slidecontainer">
+                <label for="slide">Slider:</label>
+                <input type="checkbox" id="slide" onchange="showSlider()">
+                <input type="range" min="1" max="10" value="1" class="slider" id="myRange" onchange="sliderValue()" ><p id="slidval"></p>
+            </div>
+            <div>
+                <label for="txt">Text:</label>
+                <input type="checkbox" id="txt" onchange="showTxt()">
+                <input type="number" min="1" max="10" id="numb" class="dsplay center" onchange="txtValue()">
+            </div>
+        </template>
+
+        
+        <my-component></my-component>
+        
+           
+     
+          
+        
+    </body>
+</html>
